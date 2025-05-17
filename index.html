@@ -1,0 +1,683 @@
+  <html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>
+    Gemma Navbar Responsive Hamburger Menu Neat
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+      .grid-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      gap: 12px;
+      padding: 0 6px;
+      background-color: white;
+      z-index: -1;
+    }
+    .grid-background > div {
+      flex: 1 1 0;
+      background-color: #bfdbfe; /* Tailwind blue-300 */
+      height: 100vh;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+    </style>
+  </head>
+  <body class="m-0 p-0 font-inter relative overflow-x-hidden">
+      <!-- 12 column blue grid background with white gaps -->
+      <div class="grid-background" aria-hidden="true">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
+      <!-- navbar -->
+      <nav class="bg-gradient-to-r from-[#003366] via-[#004080] to-[#003366] relative z-10 opacity-90 py-3">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <div class="flex items-center space-x-3 flex-shrink-0">
+          <img alt="White geometric M letter logo on dark blue background" class="w-8 h-8" height="32" src="images/Vector.svg" width="32"/>
+          <span class="text-white font-semibold text-lg select-none">
+            GEMMA
+          </span>
+          </div>
+          <button aria-label="Toggle menu" class="text-white text-2xl sm:hidden focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars"></i>
+          </button> 
+          <ul class="hidden sm:flex  space-x-8 text-white text-xs font-normal">
+          <li>
+            <a class="hover:underline" href="#">
+            Beranda
+            </a>
+          </li>
+          <li>
+            <a class="hover:underline" href="#">
+            Produk
+            </a>
+          </li>
+          <li>
+            <a class="hover:underline" href="#">
+            Pemesanan
+            </a>
+          </li>
+          <li>
+            <a class="hover:underline" href="#">
+            Tentang Kami
+            </a>
+          </li>
+          </ul>
+          <!-- Mobile menu -->
+          <div class="sm:hidden absolute top-full left-0 w-full bg-gradient-to-b from-[#004080] to-[#003366] shadow-lg rounded-b-md overflow-hidden z-20 hidden opacity-90" id="mobile-menu">
+          <ul class="flex flex-col text-white text-sm font-normal">
+            <li class="border-b border-white/20">
+            <a class="block px-6 py-3 hover:bg-white/10" href="#">
+              Beranda
+            </a>
+            </li>
+            <li class="border-b border-white/20">
+            <a class="block px-6 py-3 hover:bg-white/10" href="#">
+              Produk
+            </a>
+            </li>
+            <li class="border-b border-white/20">
+            <a class="block px-6 py-3 hover:bg-white/10" href="#">
+              Pemesanan
+            </a>
+            </li>
+            <li>
+            <a class="block px-6 py-3 hover:bg-white/10" href="#">
+              Tentang Kami
+            </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+        </nav>
+      <!-- akhir navbar -->
+      
+        <!-- section pertama -->
+        <section class="relative bg-gradient-to-r from-[#003366] via-[#004080] to-[#003366] overflow-hidden z-10 opacity-90 py-8 sm:py-16">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+              <!-- Teks (akan muncul di bawah pada mobile) -->
+              <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+                <h1 class="font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">
+                  Gemma Workshop
+                </h1>
+                <p class="italic text-white text-sm sm:text-base font-light mb-6 max-w-md">
+                  "Rumah elegan berbalut aluminium kokoh dengan presisi tinggi dan finishing sempurna. Dibangun untuk keindahan yang tahan lama."
+                </p>
+                <a href="https://wa.link/8rswwi" target="_blank" rel="noopener noreferrer" class="bg-[#4A90E2] hover:bg-[#3a78d1] transition-colors duration-300 rounded-md px-4 py-2 text-white text-sm font-medium flex items-center gap-2 inline-flex" aria-label="Chat Sekarang via WhatsApp">
+                  Chat Sekarang
+                  <svg aria-hidden="true" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+              <!-- Gambar (akan muncul di atas pada mobile) -->
+              <div class="w-full md:w-1/2 h-48 sm:h-64 md:h-80 rounded-md overflow-hidden bg-[#A9D1FF] bg-opacity-50">
+                <img alt="Example image to fit inside blue box, showing a modern elegant house with aluminum finishing" class="w-full h-full object-cover" loading="lazy" src="images/ch80.jpg"/>
+              </div>
+            </div>
+          </div>
+           <img 
+  alt="garis dekor" 
+  aria-hidden="true" 
+  class="pointer-events-none select-none absolute inset-0 w-full h-full object-cover opacity-20" 
+  style="object-fit: cover;" 
+  loading="lazy" 
+  src="images/line.svg"
+/>
+        </section>
+        <!-- akhir section pertama -->
+
+        <!-- section kedua -->
+              <section class="max-w-7xl mx-auto px-6 py-8 sm:py-16">
+        <div class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+          <!-- Teks (akan muncul di bawah pada mobile) -->
+          <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+            <h1 class="font-extrabold text-[#1a2a3a] text-3xl sm:text-4xl md:text-5xl leading-tight relative inline-block mb-4">
+              Kualitas<br/>Terjamin
+              <span aria-hidden="true" class="absolute left-0 bottom-2 w-[160px] h-3 bg-[#f7e27a] rounded-full opacity-80 blur-[1px] -z-10" style="clip-path: polygon(0% 50%, 10% 40%, 20% 60%, 30% 40%, 40% 60%, 50% 40%, 60% 60%, 70% 40%, 80% 60%, 90% 40%, 100% 50%, 100% 100%, 0% 100%)"></span>
+            </h1>
+            <p class="text-sm sm:text-base text-[#1a2a3a] mb-6 max-w-md">
+              Gemma menggunakan bahan premium seperti YKK, Alexindo, dan Inkalum yang teruji kualitasnya
+            </p>
+            <a href="https://wa.me/6285888647728" target="_blank" class="bg-[#4a90e2] hover:bg-[#3a78d1] text-white text-sm font-medium rounded-md px-6 py-2 inline-flex items-center gap-2 transition-colors duration-300">
+              Konsultasi via Whatsapp
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+      
+          <!-- Gambar (akan muncul di atas pada mobile) -->
+          <div class="w-full md:w-1/2 h-48 sm:h-64 md:h-80 rounded-md overflow-hidden bg-[#7db9f7] bg-opacity-50">
+            <img alt="Produk Gemma Workshop" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/1dcac17f-c9e1-45f4-89d9-e72b065183e5.jpg" loading="lazy"/>
+          </div>
+        </div>
+      </section>
+      <!-- akhir section kedua  -->
+
+
+      <!-- section ketiga  -->
+        <section class="relative bg-gradient-to-r from-[#003366] via-[#004080] to-[#003366] overflow-hidden z-10 opacity-90 py-8 sm:py-16">
+          <!-- Gambar jabat tangan sebagai background -->
+          <div class="absolute inset-0 flex justify-center items-center pointer-events-none select-none pt-12 sm:pt-20">
+            <img 
+          src="images/alumunium.svg" 
+          alt="" 
+          class="w-[70vw] max-w-3xl opacity-15 object-contain"
+          style="z-index:1;"
+          aria-hidden="true"
+          loading="lazy"
+            />
+          </div>
+          <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col items-center justify-center gap-8 md:gap-12">
+          <!-- Teks di tengah -->
+          <h1 class="font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-tight  relative inline-block text-center">
+            Spesialis Aluminium Bekasi
+          </h1>
+          <span class="block text-[#f7e27a] font-bold text-lg sm:text-xl md:text-2xl -mt-8 text-center">
+            Cepat, Rapi, dan Terpercaya
+          </span>
+            <p class="italic text-white text-sm sm:text-base font-light mb-6 max-w-md -mt-4 mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, eget facilisis sapien sem eget odio. </p>
+            <a
+              href="https://wa.me/6285888647728"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-[#4A90E2] hover:bg-[#3a78d1] transition-colors duration-300 rounded-md px-4 py-2 text-white text-sm font-medium flex items-center gap-2 inline-flex mx-auto"
+              aria-label="Pesan Sekarang via WhatsApp"
+            >
+              Pesan Sekarang
+              <svg aria-hidden="true" class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- akhir section ketiga  -->
+
+
+      <!-- section keempat (testimonial slider) -->
+      <section class="max-w-7xl mx-auto px-6 py-8 sm:py-16">
+        <div class="flex justify-center">
+          <h2
+            class="text-3xl font-extrabold text-[#2f3e4e] text-center relative inline-block mb-12"
+          >
+            Apa Kata Klien Kami
+            <span
+              class="absolute left-0 bottom-0 w-full h-3 bg-yellow-300 rounded-full opacity-60 -z-10"
+              style="filter: blur(3px)"
+            ></span>
+          </h2>
+        </div>
+        <div class="relative">
+          <!-- Slider container -->
+          <div id="testimonial-slider" class="flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-6 pb-4 scroll-smooth">
+            <!-- Card 1 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a woman with orange background, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://storage.googleapis.com/a1aa/image/e011abee-85e4-47d4-a61f-7696f351aeb7.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Nama cs</p>
+                  <p class="text-xs text-white/80">deskripsi</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Lorem ipsum</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a smiling man with light blue background, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://storage.googleapis.com/a1aa/image/b5434d5a-a107-4f9a-6250-ebdc25a5ff83.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Nama cs</p>
+                  <p class="text-xs text-white/80">Deskripsi</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Lorem ipsum</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a man with beard and glasses with pink background, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://storage.googleapis.com/a1aa/image/8c1777a7-fe90-41cf-7b09-2c7ab0cc41c5.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Nama cs</p>
+                  <p class="text-xs text-white/80">Deskripsi</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Pelayanan sangat ramah dan hasil rapi!</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a woman with short hair, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/women/44.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Ibu Sari</p>
+                  <p class="text-xs text-white/80">Klien Bekasi</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Pengerjaan cepat dan hasil memuaskan.</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a man smiling, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Pak Budi</p>
+                  <p class="text-xs text-white/80">Klien Cikarang</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Harga bersaing, kualitas oke!</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a woman with glasses, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Bu Lina</p>
+                  <p class="text-xs text-white/80">Klien Tambun</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Rekomendasi untuk pemasangan aluminium!</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a man with mustache, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/men/45.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Pak Joko</p>
+                  <p class="text-xs text-white/80">Klien Harapan Indah</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Puas dengan hasil pemasangan!</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a woman with long hair, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/women/68.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Ibu Rina</p>
+                  <p class="text-xs text-white/80">Klien Bekasi Timur</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Pekerjaan sangat profesional dan tepat waktu.</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a man with glasses, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/men/50.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Pak Andi</p>
+                  <p class="text-xs text-white/80">Klien Jatiasih</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Sangat puas dengan hasil pemasangan pintu aluminium.</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a woman smiling, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/women/51.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Ibu Dewi</p>
+                  <p class="text-xs text-white/80">Klien Pondok Gede</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Teknisi ramah dan sangat membantu.</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a man with beard, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/men/60.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Pak Rudi</p>
+                  <p class="text-xs text-white/80">Klien Mustika Jaya</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="bg-gradient-to-r from-[#3a8dff] to-[#4aa6ff] rounded-xl shadow-md w-72 flex-shrink-0 flex flex-col justify-between p-6 text-white snap-center">
+              <div>
+                <i class="fas fa-quote-left text-5xl"></i>
+                <p class="text-xs mt-2">Hasil pemasangan sangat presisi dan rapi.</p>
+                <hr class="border border-white/40 my-6" />
+              </div>
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Portrait of a woman with hijab, customer service representative"
+                  class="w-12 h-12 rounded-full object-cover"
+                  height="48"
+                  src="https://randomuser.me/api/portraits/women/70.jpg"
+                  width="48"
+                />
+                <div>
+                  <p class="font-semibold text-white text-sm">Ibu Maya</p>
+                  <p class="text-xs text-white/80">Klien Grand Wisata</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Left/Right buttons -->
+<button id="slider-left" aria-label="Geser kiri" class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -ml-6 bg-white border-2 border-white shadow w-12 h-12 aspect-square rounded-full z-10 items-center justify-center hover:bg-blue-100 transition">
+  <i class="fas fa-chevron-left text-[#3a8dff] text-xl"></i>
+</button>
+<button id="slider-right" aria-label="Geser kanan" class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 -mr-6 bg-white border-2 border-white shadow w-12 h-12 aspect-square rounded-full z-10 items-center justify-center hover:bg-blue-100 transition">
+  <i class="fas fa-chevron-right text-[#3a8dff] text-xl"></i>
+</button>
+        </div>
+        <!-- Pagination dots -->
+      <div id="slider-dots" class="flex justify-center mt-6 space-x-2">
+  <span class="w-3 h-3 rounded-full bg-[#3a8dff] transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+  <span class="w-3 h-3 rounded-full bg-gray-400 transition-all"></span>
+</div>
+      </section>
+      <!-- akhir section keempat (testimonial slider) -->
+
+
+      <!-- section kelima (Coba Pesan Sekarang) -->
+<section class="relative bg-gradient-to-r from-[#003366] via-[#004080] to-[#003366] overflow-hidden z-10 opacity-90 py-8 sm:py-16">
+  <div class="max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
+
+    <h1 class="font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">
+      Coba Pesan Sekarang
+    </h1>
+   
+    <a
+      href="https://wa.me/6285888647728"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-6 bg-blue-500 hover:bg-blue-600 transition-colors duration-300 rounded px-4 py-2 text-xs sm:text-sm flex items-center mx-auto text-white font-medium w-fit"
+      aria-label="Chat Sekarang via WhatsApp"
+    >
+      <span>Pesan Sekarang</span>
+      <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+  </div>
+
+  <footer class="text-xs sm:text-sm text-gray-300 px-4 pt-12 pb-4 mt-12">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6 sm:gap-0">
+      <a href="https://www.google.com/maps/place/Gemma+Workshop+Spesialis+Aluminium+Kaca+ACP+Kusen+Pintu+Jendela+Expanda+Partisi+Alumunium+Skylight/@-6.1565719,106.9857709,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698bd7b9b0e027:0xcfc77a35843fb261!8m2!3d-6.1565719!4d106.9883458!16s%2Fg%2F11x34fbfwq?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex flex-col items-start bg-white/10 rounded-lg p-4 mb-4 max-w-xs hover:bg-white/20 transition">
+        <img src="images/Vector.svg" alt="Logo Gemma" class="w-8 h-8 mb-2" />
+        <span class="font-semibold text-white text-base mb-1">Gemma Workshop</span>
+        <p class="text-white/80 text-xs leading-relaxed">
+          Kec, Harapan Indah 2, Jl. Ruko Ifolia No.49 Blok HY-47, Pusaka Rakyat, Kec. Tarumajaya, Kabupaten Bekasi, Jawa Barat 17214
+        </p>
+        <span class="mt-2 text-blue-200 text-xs flex items-center gap-1">
+          <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+        </span>
+      </a>
+      <div class="flex justify-between flex-grow max-w-4xl text-gray-400">
+        <div>
+          <div class="font-semibold text-white text-[11px] mb-1">Product</div>
+          <ul class="space-y-1 text-[10px] sm:text-xs">
+            <li>Overview</li>
+            <li>Pricing</li>
+            <li>Customer stories</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold text-white text-[11px] mb-1">Resources</div>
+          <ul class="space-y-1 text-[10px] sm:text-xs">
+            <li>Blog</li>
+            <li>Guides & tutorials</li>
+            <li>Help center</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold text-white text-[11px] mb-1">Company</div>
+          <ul class="space-y-1 text-[10px] sm:text-xs">
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Media kit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 flex flex-col sm:flex-row sm:justify-between sm:items-center text-gray-400 text-[10px] sm:text-xs max-w-7xl mx-auto">
+      <!-- <div class="flex items-center gap-2 mb-3 sm:mb-0 cursor-pointer select-none">
+        <i class="fas fa-globe"></i>
+        <span>English</span>
+        <i class="fas fa-chevron-down text-[8px]"></i>
+      </div> -->
+      <div class="flex flex-wrap gap-4 sm:gap-6 items-center justify-between sm:justify-start">
+        <span>Terms & privacy</span>
+        <span>Security</span>
+        <span>Status</span>
+        <span>@2025 Gemma Workshop</span>
+      </div>
+      <div class="flex gap-4 justify-center sm:justify-start mt-3 sm:mt-0 text-gray-400 text-sm">
+        <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn" class="hover:text-white transition-colors"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- akhir section kelima -->
+
+      <style>
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      </style>
+    <script>
+  // Testimonial slider logic (1 card per swipe)
+  const slider = document.getElementById('testimonial-slider');
+  const leftBtn = document.getElementById('slider-left');
+  const rightBtn = document.getElementById('slider-right');
+  const dots = document.getElementById('slider-dots').children;
+  const cards = slider.children;
+  const cardWidth = cards[0].offsetWidth + 24; // 24px gap-6
+  let current = 0;
+  const totalCards = cards.length;
+
+  function updateDots(idx) {
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove('bg-[#3a8dff]');
+      dots[i].classList.add('bg-gray-400');
+    }
+    if (dots[idx]) {
+      dots[idx].classList.remove('bg-gray-400');
+      dots[idx].classList.add('bg-[#3a8dff]');
+    }
+  }
+
+  function scrollToCard(idx) {
+    if (idx < 0) idx = 0;
+    if (idx > totalCards - 1) idx = totalCards - 1;
+    slider.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
+    updateDots(idx);
+    current = idx;
+  }
+
+  if (leftBtn && rightBtn) {
+    leftBtn.addEventListener('click', () => {
+      if (current > 0) scrollToCard(current - 1);
+    });
+    rightBtn.addEventListener('click', () => {
+      if (current < totalCards - 1) scrollToCard(current + 1);
+    });
+  }
+
+  // Dots click
+  Array.from(dots).forEach((dot, idx) => {
+    dot.addEventListener('click', () => scrollToCard(idx));
+  });
+
+  // Snap to nearest card on scroll
+  slider.addEventListener('scroll', () => {
+    const idx = Math.round(slider.scrollLeft / cardWidth);
+    updateDots(idx);
+    current = idx;
+  });
+
+  // Responsive: show/hide arrow buttons
+  function handleResize() {
+    if (window.innerWidth >= 640) {
+      leftBtn.style.display = 'flex';
+      rightBtn.style.display = 'flex';
+      slider.style.scrollSnapType = 'x mandatory';
+    } else {
+      leftBtn.style.display = 'none';
+      rightBtn.style.display = 'none';
+      slider.style.scrollSnapType = 'x mandatory';
+    }
+  }
+  window.addEventListener('resize', handleResize);
+  handleResize();
+  // Inisialisasi dot aktif
+  updateDots(0);
+</script>
+
+    <script>
+    const btn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    </script>
+  </body>
+  </html>
